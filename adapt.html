@@ -1,0 +1,263 @@
+<!--
+ * @Author: your name
+ * @Date: 2021-11-10 17:50:08
+ * @LastEditTime: 2021-11-12 11:39:17
+ * @LastEditors: Please set LastEditors
+ * @Description: 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+ * @FilePath: \testc:\Users\Administrator\Desktop\自适应模板（750px）v1.0.1\1.html
+-->
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+  <title>自适应百分比HTML布局框架 CSS5</title>
+  <style type="text/css">
+    body {
+      font: 100%;
+      margin: 0;
+      padding: 0;
+      color: #000000;
+    }
+
+    #container {
+      width: 100%;
+      /* 这将树立一个攻下 80% 涉猎器宽度的容器 */
+      /* background: #FFFFFF;
+      margin: 0 auto; */
+      /* 被动边距（与宽度一路）会将页面居中 */
+      /* border: 1px solid #000000;
+      text-align: left; */
+      /* 这将覆盖 body 元素上的“text-align: center”。 */
+    }
+
+    #mainContent {
+      padding: 0 20px;
+      /* 请记取，添补是 div 方块外部的空间，边距则是 div 方块外部的空间 */
+    }
+
+    /* @media screen and (max-width: 960px){
+    body{
+    background-color:#FF6699;
+    width: 50%;
+    margin: auto;
+    }
+} */
+    @media screen and (min-width:1024px) {
+      body {
+        /* background-color:#FF6699; */
+        width: 40%;
+        max-width: 750px;
+        margin: auto;
+      }
+
+      .container {
+        width: 750px;
+        margin: auto;
+        height: 100%;
+      }
+    }
+
+    @media screen and(max-width: 1024px) {
+      body {
+        /* background-color:#00FF66; */
+        width: 100%;
+        margin: auto;
+      }
+      .container {
+        width: 100%;
+        margin: auto;
+        height: 100%;
+      }
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+
+
+    .head {
+      display: flex;
+      justify-content: space-between;
+      padding: 0 20px;
+      height: 40px;
+      align-items: center;
+      font-weight: 600;
+      border-bottom: 1px solid #ccc;
+    }
+
+    .Hl {
+      font-size: 18px;
+
+    }
+
+    .HR {
+      font-weight: 800;
+      font-size: 28px;
+      padding-bottom: 15px;
+    }
+
+    .problem {
+      flex: 1;
+      margin: 10px 20px;
+    }
+
+    .problem div {
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #eee;
+      padding: 10px 0;
+    }
+
+    .problem p {
+      width: 85%;
+      font-weight: 900;
+    }
+
+    .problem span {
+      flex: 1;
+      text-align: right;
+      color: #ddd;
+      font-size: 20px;
+    }
+
+    h4 {
+      width: 100%;
+      font-weight: 500;
+      padding: 10px 0;
+    }
+
+    h3 {
+      margin-bottom: 10px;
+    }
+  </style>
+
+<body>
+  <div class="container" id="app">
+    <!-- <div class="head">
+      <span class="Hl">
+        < </span> <span> 常见问题
+      </span>
+      <span class="HR">...</span>
+    </div> -->
+    <div class="problem">
+      <h3>常见问题</h3>
+      <div class="problemItem1">
+        <p>学员用自己的身份证号码后8位登录，页面显示别的信息？</p>
+        <span> > </span>
+      </div>
+      <h4>
+        答：部分学员身份证号码后8位重复，所以登录的时候会显示别的学员信息，碰到这种情况，学员只要登录的时候账号填身份证号码后10位，密码还是身份证后6位，登录进去后就是自己的信息了。如果碰到身份证后10位还有重复的，那登录的账号为身份证后12位。
+      </h4>
+      <div class="problemItem2">
+        <p>学员在学习认证的拍照后，拍照页面不显示照片？</p>
+        <span> > </span>
+      </div>
+      <h4>
+        答：这种情况是监管平台限定认证照片大小，但是学员手机拍照图片超过监管平台规定尺寸要求，所有出现这种情况。解决方法：单独给学员修改成图片上传认证模式，学员提前自拍好照片，后面认证的时候上传之前自拍好的照片
+      </h4>
+      <div class="problemItem3">
+        <p>学员一天能学多久？能否增加学习时间？</p>
+        <span> > </span>
+      </div>
+      <h4> 答：学员一天只能学8课时，一课时是45分，也就是一天最多只能学6小时。关于增加每天学习时长，已经和市人社沟通，市人社领导不同意，驳回增加学时的请求。</h4>
+      <div class="problemItem4">
+        <p>学员反馈视频没有开通？学员反馈学完了，但是考试没有开通？</p>
+        <span> > </span>
+      </div>
+      <h4>
+        答：学员的学习视频在监管平台报班的时候就配置好课程了，如果出现这样的问题，是学员点错了地方，学员点我的班级或者我的课程进去学习。还有学完不能考试，也是点错地方了，手机端点点“我的”，再点“我的题库”，再点“继续做题”就可以做练习题、参加模拟考试、参加正式考试了。建议学员在学习之前先看下操作手册。
+      </h4>
+      <div class="problemItem5">
+        <p>最近学员反馈“弹窗次数已达到限制次数，请勿重复提交请求”。</p>
+        <span> > </span>
+      </div>
+      <h4>
+        无
+      </h4>
+      <div class="problemItem6">
+        <p>学员是不是要学完才可以参加考试？</p>
+        <span> > </span>
+      </div>
+      <h4>
+        答：学员只要学到90%以上就可以参加考试了，但是我们不能直接和学员说学到90%以上就可以考试。只有在最后面两天的时候，在和学员说申请了学到90%以上就可以考试。通知学员参加考试。
+      </h4>
+      <div class="problemItem7">
+        <p>学员考试会不会全程录音录像？学员什么时候可以参加考试？</p>
+        <span> > </span>
+      </div>
+      <h4>
+        答：学员考试过程中不会全程录音录像，只是在考试的时候弹出2次拍照认证；
+        学员学完后，并且在开班日期之内都可以参加考试，比如结班日期是11月7日，学员在11月7日24点之前都可以参加考试，前提是学员学大90%以上（不包含90%）。
+      </h4>
+    </div>
+  </div>
+  <!-- <script src="./js/index.js"></script> -->
+  <script src="https://cdn.bootcdn.net/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+  <script>
+    let num = 7 //题目数量
+    for (var i = 1; i <= num; i++) {
+      $(".problemItem" + i).bind("click", {
+        index: i
+      }, clickHandler);
+    }
+    // for (let index = 1; index < num; index++) {
+    $(".problem>h4").each((i, n) => {
+      $(n).attr('class', 'answer' + (i * 1 + 1)).css({
+        "display": 'none'
+      })
+    })
+    $('.problem').find('p').each((i, n) => {
+      $(n).attr('class', 'p' + (i * 1 + 1)).css({
+        'white-space': 'nowrap',
+        'overflow': 'hidden',
+        'text-overflow': 'ellipsis',
+      })
+    })
+
+    function clickHandler(event) {
+      var i = event.data.index;
+      var next = $(this).next();
+      let obj
+      $(this).next().slideToggle("fast")
+      $(".problem>h4").not(next).slideUp();
+      // $(this).not()
+      console.log($(this).find('p').attr('style'), $(this).find('p'), $(this))
+      if ($(this).find('p').attr('style')) {
+        console.log(1)
+        obj = {
+          'white-space': '',
+          'overflow': '',
+          'text-overflow': '',
+        }
+      } else {
+        obj = {
+          'white-space': 'nowrap',
+          'overflow': 'hidden',
+          'text-overflow': 'ellipsis',
+        }
+      }
+      $(this).find('p').css({
+        'white-space': '',
+        'overflow': '',
+        'text-overflow': '',
+      })
+      $(this).find('p').css(obj)
+      let a = $(this).find('p')
+      console.log(a)
+      $('.problem').find('p').not(a).css({
+        'white-space': 'nowrap',
+        'overflow': 'hidden',
+        'text-overflow': 'ellipsis',
+      })
+    }
+  </script>
+</body>
+
+</html>
